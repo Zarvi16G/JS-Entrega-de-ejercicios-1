@@ -18,7 +18,7 @@ const renderList = () => {
     li.textContent = item;
 
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Borrar';
+    deleteButton.textContent = 'Eliminar';
     deleteButton.addEventListener('click', () => deleteItem(index));
 
     li.appendChild(deleteButton); // el botón va dentro del li

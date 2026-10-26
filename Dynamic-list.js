@@ -3,25 +3,24 @@ const list = document.getElementById('list');
 
 const array = ["peach", "banana", "apple", "orange", "grape", "kiwi", "mango", "strawberry", "blueberry", "raspberry"];
 
-const renderList = () => {
-  array.map((item) => {
+// Dibuja la lista desde cero con los elementos recibidos
+const renderList = (items) => {
+  list.textContent = '';
+
+  items.forEach((item) => {
     const li = document.createElement('li'); // un li NUEVO por cada ítem
     li.textContent = item;
     list.appendChild(li);
-  });   
+  });
 };
 
-renderList(); // muestra lo guardado apenas se abre la página
+// includes: muestra los elementos que CONTIENEN el texto, no solo los que empiezan por él
+const filterList = () => {
+  const filter = input.value.toLowerCase();
+  const filteredArray = array.filter((item) => item.toLowerCase().includes(filter));
+  renderList(filteredArray);
+};
 
-function filterList() {
-    const filter = input.value.toLowerCase();
-    list.innerHTML = '';
+input.addEventListener('input', filterList);
 
-    const filteredArray = array.filter(item => item.toLowerCase().startsWith(filter));
-    
-    filteredArray.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        list.appendChild(li);
-    });
-}
+renderList(array); // muestra la lista completa apenas se abre la página

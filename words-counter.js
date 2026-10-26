@@ -10,6 +10,6 @@ textInput.addEventListener('input', () => {
     const trimmedText = text.trim();
     const words = trimmedText === '' ? 0 : trimmedText.split(/\s+/).length;
 
-    charactersCount.textContent = `Characters: ${characters}`;
-    wordsCount.textContent = `Words: ${words}`;
+    charactersCount.textContent = `Caracteres: ${characters}`;
+    wordsCount.textContent = `Palabras: ${words}`;
 });

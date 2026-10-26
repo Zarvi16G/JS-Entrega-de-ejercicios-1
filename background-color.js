@@ -1,16 +1,17 @@
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
+const colorButton = document.getElementById('color-button');
+
+// Arma un color hexadecimal (#RRGGBB) con 6 caracteres al azar
+const getRandomColor = () => {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
-}
-
-const color = () => {
-    document.getElementById('body').style.backgroundColor = getRandomColor();
 };
 
-console.log(color());
+const changeBackgroundColor = () => {
+  document.body.style.backgroundColor = getRandomColor();
+};
 
-document.getElementById('boton').addEventListener('click', color);
+colorButton.addEventListener('click', changeBackgroundColor);

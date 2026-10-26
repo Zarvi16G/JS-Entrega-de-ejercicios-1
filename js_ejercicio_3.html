@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 3 · Lista dinámica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="tasks-list-localstorage.js" defer></script>
 </head>
 <body>
 
-    <h1>Exercise 3</h1>
+    <main class="page">
+        <a class="back-link" href="index.html">← Volver al índice</a>
 
-    <input type="text" name="text-box" id="input" placeholder="Write anything">
-    <button type="submit" id="add-button">Add new element</button>
+        <header class="page-header">
+            <span class="tag">Ejercicio 03</span>
+            <h1>Lista dinámica</h1>
+        </header>
 
-    <ul id="list">
-        
-    </ul>
+        <section class="statement">
+            <h2>Enunciado</h2>
+            <p>Crea una página con un campo de texto, un botón que diga "Agregar", y una lista vacía debajo.</p>
+            <ul>
+                <li>Cuando el usuario escriba un texto y haga clic en "Agregar", el texto debe añadirse como un nuevo elemento de la lista.</li>
+                <li>Añade un botón al lado de cada elemento para eliminarlo de la lista.</li>
+            </ul>
+        </section>
+
+        <section class="demo">
+            <div class="controls">
+                <input type="text" id="input" placeholder="Escribe algo">
+                <button id="add-button">Agregar</button>
+            </div>
+
+            <ul id="list" class="item-list"></ul>
+        </section>
+    </main>
 
 </body>
 </html>

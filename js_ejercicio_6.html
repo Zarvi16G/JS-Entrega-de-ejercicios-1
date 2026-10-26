@@ -1,20 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 6 · Temporizador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="timer.js" defer></script>
 </head>
 <body>
 
-    <h1>Ejercicio 6</h1>
+    <main class="page">
+        <a class="back-link" href="index.html">← Volver al índice</a>
 
-    <p id="time">00:00:00</p>
+        <header class="page-header">
+            <span class="tag">Ejercicio 06</span>
+            <h1>Temporizador</h1>
+        </header>
 
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <button id="reset">Reset</button>
-    
+        <section class="statement">
+            <h2>Enunciado</h2>
+            <p>Crea una página con un temporizador que comience en 00:00:00. Incluye tres botones: "Iniciar", "Pausar" y "Reiniciar".</p>
+            <ul>
+                <li>Al hacer clic en "Iniciar", el temporizador debe comenzar a contar los segundos, minutos y horas.</li>
+                <li>"Pausar" detiene el conteo pero mantiene el tiempo actual.</li>
+                <li>"Reiniciar" pone el temporizador en 00:00:00.</li>
+            </ul>
+        </section>
+
+        <section class="demo">
+            <p id="time" class="display">00:00:00</p>
+
+            <div class="controls">
+                <button id="start">Iniciar</button>
+                <button id="stop">Pausar</button>
+                <button id="reset">Reiniciar</button>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>

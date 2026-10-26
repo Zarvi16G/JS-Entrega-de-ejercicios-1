@@ -1,24 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 5 · Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="basic-calculator.js" defer></script>
 </head>
 <body>
 
-    <h1>Basic Calculator</h1>
+    <main class="page">
+        <a class="back-link" href="index.html">← Volver al índice</a>
 
-    <input type="number" name="number1" id="number1" placeholder="Enter first number">
-    <input type="number" name="number2" id="number2" placeholder="Enter second number">
-    
-    <button id="add">Add</button>
-    <button id="subtract">Subtract</button>
-    <button id="multiply">Multiply</button>
-    <button id="divide">Divide</button>
+        <header class="page-header">
+            <span class="tag">Ejercicio 05</span>
+            <h1>Calculadora sencilla</h1>
+        </header>
 
-    <ul id="result"></ul>
-    <button id="clear">Clear</button>
+        <section class="statement">
+            <h2>Enunciado</h2>
+            <p>Crea una página con dos campos de entrada de números y cuatro botones: "Sumar", "Restar", "Multiplicar", y "Dividir".</p>
+            <ul>
+                <li>Al hacer clic en cualquiera de los botones, debe mostrarse el resultado de la operación en un área de texto o debajo de los botones.</li>
+                <li>Asegúrate de validar los datos para evitar errores (como división por cero o entradas vacías).</li>
+            </ul>
+        </section>
+
+        <section class="demo">
+            <input type="number" id="number1" placeholder="Primer número">
+            <input type="number" id="number2" placeholder="Segundo número">
+
+            <div class="controls">
+                <button id="add">Sumar</button>
+                <button id="subtract">Restar</button>
+                <button id="multiply">Multiplicar</button>
+                <button id="divide">Dividir</button>
+            </div>
+
+            <ul id="result" class="item-list"></ul>
+            <button id="clear">Limpiar</button>
+        </section>
+    </main>
+
 </body>
 </html>

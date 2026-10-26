@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks List</title>
+    <title>Ejercicio 9 · Lista de tareas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="search-real-time.js" defer></script>
-    <style>
-        #tasks-list {
-            list-style: none;
-            padding: 0;
-        }
-    </style>
 </head>
 <body>
 
-    <h1>Exercise 9</h1>
+    <main class="page">
+        <a class="back-link" href="index.html">← Volver al índice</a>
 
-    <ul id="tasks-list">
+        <header class="page-header">
+            <span class="tag">Ejercicio 09</span>
+            <h1>Lista de tareas con localStorage</h1>
+        </header>
 
-    </ul>
+        <section class="statement">
+            <h2>Enunciado</h2>
+            <p>Crea una aplicación de lista de tareas.</p>
+            <ul>
+                <li>Cada tarea debe incluir un texto y un checkbox para marcarla como completada.</li>
+                <li>Las tareas se deben guardar en localStorage para que persistan incluso si la página se recarga.</li>
+                <li>Debe incluir un botón para limpiar todas las tareas completadas y actualizar el localStorage.</li>
+            </ul>
+        </section>
 
-    <button id="clear-completed">Clear completed tasks</button>
+        <section class="demo">
+            <ul id="tasks-list" class="item-list item-list--tasks"></ul>
+            <button id="clear-completed">Limpiar completadas</button>
+        </section>
+    </main>
 
 </body>
 </html>

@@ -1,0 +1,11 @@
+{
+  "name": "js-entrega-de-ejercicios-1",
+  "private": true,
+  "scripts": {
+    "build:css": "sass scss/main.scss css/styles.css --no-source-map",
+    "watch:css": "sass scss/main.scss css/styles.css --no-source-map --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.80.6"
+  }
+}

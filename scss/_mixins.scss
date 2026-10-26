@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+@mixin neon-text {
+  color: $pink;
+  text-shadow: 0 0 4px $pink-glow, 0 0 16px $pink-glow;
+}
+
+@mixin neon-border {
+  border: 1px solid $pink;
+  box-shadow: 0 0 8px $pink-glow, inset 0 0 8px rgba(255, 42, 109, 0.12);
+}
+
+// Media query mobile-first: los estilos dentro aplican desde ese ancho
+@mixin from($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

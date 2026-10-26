@@ -7,18 +7,7 @@ const getTasks = () => JSON.parse(localStorage.getItem('tasks')) || [];
 // Guarda la lista completa como texto
 const saveTasks = (tasks) => localStorage.setItem('tasks', JSON.stringify(tasks));
 
-/*
- * Posición de un <li> dentro de la lista.
- *
- * La fila en la posición i corresponde a tasks[i]. Se calcula en el momento del
- * evento (y no al crear la fila) porque al borrar una tarea las posiciones de
- * las de abajo se mueven.
- *
- * Tipos de fila según su posición:
- * - index < tasks.length   -> tarea guardada
- * - index === tasks.length -> caja vacía habilitada para escribir la siguiente
- * - index > tasks.length   -> caja deshabilitada (bloqueada) de abajo
- */
+// Posición del li en la lista: < tasks.length es tarea, === es la caja vacía, > es la bloqueada
 const getRowIndex = (li) => Array.from(list.children).indexOf(li);
 
 // Tachado si la tarea está completada
@@ -37,12 +26,12 @@ const createRow = (task, disabled) => {
 
   const textInput = document.createElement('input');
   textInput.type = 'text';
-  textInput.placeholder = 'Write something here';
+  textInput.placeholder = 'Escribe una tarea';
   textInput.value = task ? task.text : '';
   textInput.disabled = disabled;
   updateCompletedStyle(textInput, checkbox.checked);
 
-  // 'input': se dispara con cada cambio del texto (igual que en el ejercicio 8)
+  // 'input' se dispara con cada cambio del texto
   textInput.addEventListener('input', () => {
     const tasks = getTasks();
     const index = getRowIndex(li);
@@ -66,14 +55,7 @@ const createRow = (task, disabled) => {
     saveTasks(tasks);
   });
 
-  /*
-   * 'blur': se dispara cuando la caja pierde el foco (el usuario hace clic fuera
-   * o pasa a otra caja).
-   *
-   * Las tareas vacías se borran aquí y no en 'input' porque, si se borrara al
-   * instante, la caja desaparecería mientras el usuario la está editando (por
-   * ejemplo, si borra todo para reescribirla).
-   */
+  // 'blur' se dispara al salir de la caja; ahí se borran las tareas que quedaron vacías
   textInput.addEventListener('blur', () => {
     const tasks = getTasks();
     const task = tasks[getRowIndex(li)];
@@ -99,8 +81,7 @@ const createRow = (task, disabled) => {
 
 // Dibuja toda la lista desde cero
 const renderList = () => {
-  // Quita tareas vacías que hayan quedado guardadas (por ejemplo, si se recargó
-  // la página sin salir de una caja vacía)
+  // Descarta tareas vacías que hayan quedado guardadas
   const tasks = getTasks().filter((task) => task.text !== '');
   saveTasks(tasks);
 

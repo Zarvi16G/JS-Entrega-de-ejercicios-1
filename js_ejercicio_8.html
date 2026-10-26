@@ -1,20 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Words Counter</title>
+    <title>Ejercicio 8 · Contador de palabras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="words-counter.js" defer></script>
 </head>
 <body>
 
-    <h1>Words and Characters Counter</h1>
-    <label for="text-input">Write a paragraph:</label>
-    <br>
-    <textarea id="text-input" rows="8" cols="50" maxlength="500" placeholder="Write anything..."></textarea>
+    <main class="page">
+        <a class="back-link" href="index.html">← Volver al índice</a>
 
-    <p id="characters-count">Characters: 0</p>
-    <p id="words-count">Words: 0</p>
+        <header class="page-header">
+            <span class="tag">Ejercicio 08</span>
+            <h1>Contador de palabras y caracteres</h1>
+        </header>
+
+        <section class="statement">
+            <h2>Enunciado</h2>
+            <p>Crea una página con un campo de texto donde el usuario pueda escribir un párrafo.</p>
+            <ul>
+                <li>Muestra en tiempo real el número de caracteres y palabras ingresados debajo del campo.</li>
+                <li>Palabras deben ser separadas por espacios, y los caracteres no deben incluir espacios ni saltos de línea.</li>
+            </ul>
+        </section>
+
+        <section class="demo">
+            <div class="field">
+                <label for="text-input">Escribe un párrafo</label>
+                <textarea id="text-input" rows="8" maxlength="500" placeholder="Escribe algo..."></textarea>
+            </div>
+
+            <div class="stats">
+                <p id="characters-count">Caracteres: 0</p>
+                <p id="words-count">Palabras: 0</p>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>

@@ -19,10 +19,7 @@ function timerFunction() {
 };
 
 const startTimer = () => {
-    // Al usar setInterval, puede que el navegador retrase
-    //  los valores que va corriendo, ocasionando un desfase de tiempo.
-    // Para evitarlo se haria con un Date.now() y calculando la diferencia de tiempo, 
-    // pero para este caso no es necesario.
+  // Si ya hay un intervalo corriendo, no se crea otro
   if (intervalId !== null) return;
   intervalId = setInterval(() => {
     seconds++;

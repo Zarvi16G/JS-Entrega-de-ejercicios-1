@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click counter</title>
+    <title>Ejercicio 2 · Contador de clics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="clicks-counter.js" defer></script>
 </head>
 <body>
 
-    <h1>Click Counter</h1>
-    <button id="clickButton">Click Me!</button>
-    <p>Number of clicks: <span id="clickCount">0</span></p>
+    <main class="page">
+        <a class="back-link" href="index.html">← Volver al índice</a>
 
-    <script src="clicks-counter.js"></script>
-    
+        <header class="page-header">
+            <span class="tag">Ejercicio 02</span>
+            <h1>Contador de clics</h1>
+        </header>
+
+        <section class="statement">
+            <h2>Enunciado</h2>
+            <p>Crea una página con un botón que diga "Contar clics" y un texto inicial que muestre "Clics: 0". Cada vez que se haga clic en el botón, el texto debe actualizarse para mostrar el número total de clics realizados.</p>
+        </section>
+
+        <section class="demo">
+            <p class="display">Clics: <span id="clickCount">0</span></p>
+            <button id="clickButton">Contar clics</button>
+        </section>
+    </main>
+
 </body>
 </html>

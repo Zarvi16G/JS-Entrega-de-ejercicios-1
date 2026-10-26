@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic List</title>
+    <title>Ejercicio 4 · Filtro de búsqueda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="Dynamic-list.js" defer></script>
-
 </head>
 <body>
 
-    <h1>Exercise 4</h1>
+    <main class="page">
+        <a class="back-link" href="index.html">← Volver al índice</a>
 
-    <input type="text" name="text-box" id="input" placeholder="Write anything" oninput="filterList()">
-    <ul id="list">
-        
-    </ul>
-    
+        <header class="page-header">
+            <span class="tag">Ejercicio 04</span>
+            <h1>Filtro de búsqueda en tiempo real</h1>
+        </header>
+
+        <section class="statement">
+            <h2>Enunciado</h2>
+            <p>Crea una página con un campo de texto y una lista predefinida de elementos.</p>
+            <ul>
+                <li>Mientras el usuario escribe en el campo, la lista debe actualizarse en tiempo real para mostrar solo los elementos que contienen el texto escrito.</li>
+            </ul>
+            <p>Ejemplo: si la lista contiene ["Perro", "Gato", "Pez"] y el usuario escribe "Ga", solo "Gato" debe quedar visible.</p>
+        </section>
+
+        <section class="demo">
+            <input type="text" id="input" placeholder="Buscar fruta">
+            <ul id="list" class="item-list"></ul>
+        </section>
+    </main>
+
 </body>
 </html>
